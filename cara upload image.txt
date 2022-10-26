@@ -1,0 +1,8 @@
+CARA UPLOAD IMAGE
+1. Tambahkan enctype di formnya
+2. Buat form untuk pilih file, getbootstrap->form control
+3. Pada function store di controller, $request->file('nama form')->store('bikin nama folder tempat penyimpanan');
+contoh :
+return $request->file('image')->store('gambar');
+4. Buka file .env, tambahkan di paling bawah FILESYSTEM_DRIVER = public
+5. php artisan storage:link
